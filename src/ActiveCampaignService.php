@@ -75,6 +75,17 @@ class ActiveCampaignService
         $result = $this->ac->api("contact/sync", $data);
         return (bool)$result->success;
     }
+    
+     /**
+     * @param array $data
+     *
+     * @return bool
+     */
+    public function contactEdit(array $data)
+    {
+        $result = $this->ac->api("contact/edit", $data);
+        return (bool)$result->success;
+    }
 
     /**
      * @param \stdClass $contact
